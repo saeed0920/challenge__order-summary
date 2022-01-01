@@ -1,0 +1,215 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --color-blue-dark: hsl(245, 75%, 52%);
+}
+
+html {
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 375px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  height: 100vh;
+}
+
+/* //////////////////////////// */
+/* container */
+.container {
+  border-radius: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 24rem;
+  width: 50rem;
+  overflow: hidden;
+  grid-gap: 2rem;
+  align-self: center;
+  justify-self: center;
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+  background-color: #ffff;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.1);
+}
+@media only screen and (max-width: 375px) {
+  .container {
+    width: 90%;
+  }
+}
+
+/* //// */
+.container-sec {
+  display: grid;
+  grid-row: 2 / -1;
+  display: grid;
+  padding: 2rem 6rem;
+  grid-row-gap: 2rem;
+}
+@media only screen and (max-width: 375px) {
+  .container-sec {
+    padding: 1rem 4rem;
+  }
+}
+
+/* ///// */
+.container-flex {
+  background-color: #f8f9fe;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+/* img background */
+.background-img {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #e0e8ff;
+  background-position: center;
+  width: 100vw;
+  z-index: -1;
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+}
+@media only screen and (max-width: 375px) {
+  .background-img {
+    top: 0;
+    width: 100%;
+  }
+}
+
+.background-img span {
+  position: absolute;
+  top: -10rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: top;
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 375px) {
+  .background-img span {
+    background-image: url(./images/pattern-background-mobile.svg);
+    top: 0;
+  }
+}
+
+/* item container */
+.img {
+  width: 100%;
+  height: 24rem;
+  background-image: url(./images/illustration-hero.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.h1 {
+  justify-self: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #25334d;
+}
+.p {
+  padding: 0 3rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 600;
+  color: #84889f;
+  justify-self: center;
+  text-align: center;
+  line-height: 1.5;
+}
+@media only screen and (max-width: 375px) {
+  .p {
+    padding: 0 1rem;
+  }
+}
+
+/*  __container-flex-items */
+.img-music {
+  border-radius: 50%;
+  background-image: url(./images/icon-music.svg);
+  width: 4rem;
+  height: 4rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 2rem;
+}
+.text {
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+.text__h1 {
+  font-size: 1.6rem;
+}
+.text__p {
+  font-size: 1.6rem;
+}
+.link {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.link:hover {
+  text-decoration: none;
+}
+.btn {
+  outline: none;
+  border: none;
+  background-color: #382ae1;
+  color: #ffff;
+  padding: 1.5rem 4rem;
+  border-radius: 2rem;
+  box-shadow: 0 2rem 2.5rem rgba(56, 42, 225, 0.25);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 375px) {
+  .btn {
+    padding: 2rem 4rem;
+    margin-top: 0;
+  }
+}
+
+.btn:hover {
+  background-color: #766cf1;
+  color: white;
+}
+.link-cansel {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #8e94b0;
+  justify-self: center;
+  margin-top: 1rem;
+  transition: all 0.1s;
+  padding-bottom: 2rem;
+  font-weight: 600;
+}
+.link-cansel:hover {
+  color: #1f2b4c;
+}
